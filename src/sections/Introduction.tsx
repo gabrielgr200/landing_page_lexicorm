@@ -4,7 +4,7 @@ import Tag from "@/components/Tag";
 import { useRef } from "react";
 import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 
-const text = `Pare de trabalhar mais. Comece a trabalhar melhor. Cada processo manual é uma hora perdida. A LexTec transforma tarefas repetitivas em fluxos inteligentes que rodam sozinhos — 24 horas por dia, 7 dias por semana.`;
+const text = `Pare de trabalhar mais. Comece a trabalhar melhor. Cada processo manual é uma hora perdida. A LexiCorm transforma tarefas repetitivas em fluxos inteligentes que rodam sozinhos — 24 horas por dia, 7 dias por semana.`;
 
 export default function Introduction() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -15,7 +15,7 @@ export default function Introduction() {
     });
 
     return (
-        <section ref={containerRef} className="py-28 lg:py-28">
+        <section id="services" ref={containerRef} className="py-16 lg:py-28">
             <div className="container">
                 <div className="flex justify-center">
                     <Tag>Nossos Serviços</Tag>
@@ -42,7 +42,7 @@ export default function Introduction() {
                             ),
                         }}
                     >
-                        Por isso criamos a LexTec.
+                        Por isso criamos a LexiCorm.
                     </motion.span>
                 </div>
             </div>

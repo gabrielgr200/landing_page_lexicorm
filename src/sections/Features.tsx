@@ -10,7 +10,12 @@ export default function Features() {
     const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
 
     useEffect(() => {
-        if (isTablet) return;
+        if (isTablet) {
+            gsap.set(".content", { opacity: 1, y: 0, clearProps: "all" });
+            return;
+        }
+
+        gsap.set(".content", { opacity: 0, y: 40 });
 
         const timeline = gsap.timeline({
             scrollTrigger: {
@@ -32,20 +37,20 @@ export default function Features() {
     }, [isTablet]);
 
     return (
-        <section id="showcase" className="relative">
-            <div className="relative overflow-hidden">
+        <section id="showcase" className="relative px-4 sm:px-6 lg:px-8">
+            <div className="relative overflow-hidden max-w-6xl mx-auto rounded-2xl">
                 <video
                     src="/note.mp4"
                     loop
                     muted
                     autoPlay
                     playsInline
-                    className="w-full object-cover object-center"
+                    className="w-full object-cover object-center "
                 />
 
                 <div className="mask absolute top-0 left-0 w-full h-full">
                     <img
-                        src="/mask-logo.svg"
+                        src="/code.svg"
                         alt="logo"
                         className="w-full h-full object-cover"
                         style={{ transform: "matrix(80, 0, 0, 80, 0, 0)" }}
@@ -53,17 +58,17 @@ export default function Features() {
                 </div>
             </div>
 
-            <div className="content relative z-10 bg-black text-[#86868b] font-semibold text-xl -mt-20 opacity-0 translate-y-10">
-                <div className="container mx-auto px-5 pb-20 flex flex-col lg:flex-row justify-center gap-20">
+            <div className="content relative z-10 bg-black text-[#86868b] font-semibold text-xl mt-8 lg:-mt-20">
+                <div className="container mx-auto px-5 pb-12 lg:pb-20 flex flex-col lg:flex-row justify-center gap-10 lg:gap-20">
                     <div className="lg:max-w-md">
-                        <h2 className="font-semibold text-3xl lg:text-7xl text-white">
+                        <h2 className="font-semibold text-3xl md:text-5xl lg:text-7xl text-white">
                             Sites que vendem
                         </h2>
-                        <div className="space-y-5 mt-7 pe-10 font-light">
+                        <div className="space-y-5 mt-7 pe-4 lg:pe-10 font-light">
                             <p>
                                 A{" "}
                                 <span className="text-white font-semibold">
-                                    LexTec cria sites e landing pages que
+                                    LexiCorm cria sites e landing pages que
                                     convertem visitantes em clientes
                                 </span>
                                 , com design moderno e estratégico.

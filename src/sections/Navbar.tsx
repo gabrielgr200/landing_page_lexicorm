@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import { animate, AnimatePresence, motion } from "framer-motion";
 
 const navLinks = [
-    { label: "Início", href: "#" },
+    { label: "Início", href: "#top" },
     { label: "Serviços", href: "#services" },
     { label: "Pacotes", href: "#packages" },
     { label: "Tecnologia", href: "#technology" },
@@ -124,6 +124,9 @@ export default function Navbar() {
                                     onClick={(e) => {
                                         e.preventDefault();
                                         setActiveIndex(idx);
+                                        const target = document.querySelector(link.href);
+                                        if (target) target.scrollIntoView({ behavior: "smooth" });
+                                        else window.scrollTo({ top: 0, behavior: "smooth" });
                                     }}
                                     className={`relative z-10 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 ${
                                         activeIndex === idx
@@ -172,6 +175,10 @@ export default function Navbar() {
                         <Button
                             variant="secondary"
                             className="hidden md:inline-flex items-center"
+                            onClick={() => {
+                                const target = document.querySelector("#contact");
+                                if (target) target.scrollIntoView({ behavior: "smooth" });
+                            }}
                         >
                             Contato
                         </Button>
@@ -196,6 +203,9 @@ export default function Navbar() {
                                             e.preventDefault();
                                             setActiveIndex(idx);
                                             setMobileOpen(false);
+                                            const target = document.querySelector(link.href);
+                                            if (target) target.scrollIntoView({ behavior: "smooth" });
+                                            else window.scrollTo({ top: 0, behavior: "smooth" });
                                         }}
                                         className={`px-4 py-3 rounded-xl text-sm font-medium transition-colors duration-200 ${
                                             activeIndex === idx
@@ -210,6 +220,11 @@ export default function Navbar() {
                                     <Button
                                         variant="secondary"
                                         className="w-full justify-center"
+                                        onClick={() => {
+                                            setMobileOpen(false);
+                                            const target = document.querySelector("#contact");
+                                            if (target) target.scrollIntoView({ behavior: "smooth" });
+                                        }}
                                     >
                                         Contato
                                     </Button>

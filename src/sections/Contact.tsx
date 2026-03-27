@@ -68,12 +68,12 @@ export default function Contact() {
     const inputClass = `w-full bg-[#0d1117] border border-white/[0.08] rounded-xl px-4 py-3 text-white text-sm placeholder:text-white/25 outline-none focus:border-[#4682b4] transition-colors duration-200`;
 
     return (
-        <section ref={sectionRef} className="py-24 bg-black">
+        <section id="contact" ref={sectionRef} className="py-24 bg-black overflow-x-hidden">
             <div className="max-w-[1280px] mx-auto px-4">
                 <div className="contact-title text-center mb-16 opacity-0">
                     <h2 className="text-4xl lg:text-6xl font-bold text-white mb-4">
                         Vamos construir algo{" "}
-                        <span className="text-[#4682b4]">juntos</span>
+                        <span className="text-[#3091e1]">juntos</span>
                     </h2>
                     <p className="text-white/40 text-lg max-w-md mx-auto">
                         Descreva seu projeto e retornamos em até 24h com uma
@@ -125,7 +125,7 @@ export default function Contact() {
                                     </svg>
                                 ),
                                 label: "WHATSAPP",
-                                value: "(37) 99660-5585",
+                                value: "(37) 98426-6588",
                             },
                             {
                                 icon: (

@@ -222,7 +222,7 @@ export default function Hero() {
 
                 <h1
                     ref={titleRef}
-                    className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center mt-6 min-h-[1.2em]"
+                    className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center mt-6"
                     style={{ opacity: 0 }}
                 >
                     {displayedText}
@@ -231,7 +231,7 @@ export default function Hero() {
 
                 <p
                     ref={subtitleRef}
-                    className="text-center text-lg md:text-xl text-white/70 font-light mt-8 px-4 md:px-0"
+                    className="text-center text-lg md:text-xl text-white/70 font-light mt-4 md:mt-8 px-4 md:px-0"
                     style={{ opacity: 0 }}
                 >
                     A LexiCorm automatiza o que trava o seu crescimento —{" "}

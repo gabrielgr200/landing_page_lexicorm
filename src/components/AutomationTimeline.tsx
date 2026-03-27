@@ -36,21 +36,21 @@ function HeroMockup() {
                 </div>
             </div>
             <div className="grid lg:grid-cols-2">
-                <div className="p-5 font-mono text-[11px] leading-[1.9] border-r border-white/[0.05]">
+                <div className="p-5 font-mono text-[11px] leading-[1.9] border-b lg:border-b-0 lg:border-r border-white/[0.05] overflow-x-auto">
                     {(
                         [
                             [
                                 { t: "import", c: "#c792ea" },
-                                { t: " { LexTecAI } ", c: "#eeffff" },
+                                { t: " { LexiCormAI } ", c: "#eeffff" },
                                 { t: "from", c: "#c792ea" },
-                                { t: " '@lexTec/sdk'", c: "#c3e88d" },
+                                { t: " '@LexiCorm/sdk'", c: "#c3e88d" },
                             ],
                             [],
                             [
                                 { t: "const", c: "#c792ea" },
                                 { t: " agent ", c: "#eeffff" },
                                 { t: "= new", c: "#c792ea" },
-                                { t: " LexTecAI", c: "#82aaff" },
+                                { t: " LexiCormAI", c: "#82aaff" },
                                 { t: "({", c: "#eeffff" },
                             ],
                             [
@@ -124,7 +124,7 @@ function HeroMockup() {
                 </div>
                 <div className="p-5">
                     <div className="text-white/20 text-[11px] mb-3 flex gap-4">
-                        <span className="text-[#4682b4] border-b border-[#4682b4] pb-1">
+                        <span className="text-[#2bb3a3] border-b border-[#3091e1] pb-1">
                             Terminal
                         </span>
                         <span>Output</span>
@@ -134,47 +134,47 @@ function HeroMockup() {
                         {[
                             {
                                 icon: "✓",
-                                c: "#3ddc84",
+                                c: "#2bb3a3",
                                 text: "Agente iniciado — modelo: gpt-4o",
                             },
                             {
                                 icon: "→",
-                                c: "#4682b4",
+                                c: "#3091e1",
                                 text: "Conectando ao CRM...",
                             },
                             {
                                 icon: "✓",
-                                c: "#3ddc84",
+                                c: "#2bb3a3",
                                 text: "200 leads importados",
                             },
                             {
                                 icon: "→",
-                                c: "#4682b4",
+                                c: "#3091e1",
                                 text: "Classificando por score de IA...",
                             },
                             {
                                 icon: "✓",
-                                c: "#3ddc84",
+                                c: "#2bb3a3",
                                 text: "87 leads — alta prioridade",
                             },
                             {
                                 icon: "→",
-                                c: "#4682b4",
+                                c: "#3091e1",
                                 text: "Disparando e-mails...",
                             },
                             {
                                 icon: "✓",
-                                c: "#3ddc84",
+                                c: "#2bb3a3",
                                 text: "87 e-mails enfileirados",
                             },
                             {
                                 icon: "→",
-                                c: "#4682b4",
+                                c: "#3091e1",
                                 text: "Gerando relatório PDF...",
                             },
                             {
                                 icon: "✓",
-                                c: "#3ddc84",
+                                c: "#2bb3a3",
                                 text: "Relatório salvo em /outputs/",
                             },
                         ].map((l, i) => (
@@ -186,7 +186,7 @@ function HeroMockup() {
                         <div className="text-white/30 mt-1">
                             <span style={{ color: "#4682b4" }}>▸</span>{" "}
                             aguardando próximo ciclo{" "}
-                            <span className="inline-block w-1.5 h-3 bg-[#4682b4] animate-pulse align-middle" />
+                            <span className="inline-block w-1.5 h-3 bg-[#3091e1] animate-pulse align-middle" />
                         </div>
                     </div>
                     <div className="mt-4 bg-[#0a0a0f] rounded-xl border border-white/[0.06] p-3">
@@ -269,7 +269,7 @@ function FlowCard() {
             name: "E-mail personalizado",
             sub: "Gerando com GPT-4o...",
             status: "rodando",
-            sc: "#7ec8f0",
+            sc: "#3091e1",
             bc: "#4682b4",
         },
         {
@@ -463,7 +463,7 @@ export default function AutomationTimeline() {
     }, []);
 
     return (
-        <div className="max-w-[1280px] mx-auto mt-10">
+        <div className="max-w-[1280px] mx-auto mt-10 px-4 lg:px-8">
             <div className="flex md:pl-10 space-x-3 md:space-x-10">
                 <div className="flex flex-col items-center ">
                     <motion.div
@@ -494,13 +494,13 @@ export default function AutomationTimeline() {
                     />
                 </div>
 
-                <div className="md:w-10/12 mb-10">
+                <div className="flex-1 min-w-0 mb-10">
                     <motion.div
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ delay: 0.4, duration: 0.3 }}
                         viewport={{ once: false }}
-                        className="text-[20px] md:text-2xl mb-7 font-medium text-white"
+                        className="text-[18px] md:text-2xl mb-7 font-medium text-white"
                     >
                         Automação com IA
                     </motion.div>
@@ -509,12 +509,12 @@ export default function AutomationTimeline() {
                         whileInView={{ opacity: 1 }}
                         transition={{ delay: 0.5, duration: 0.3 }}
                         viewport={{ once: false }}
-                        className="text-[28px] md:text-[40px] lg:text-5xl mb-7 font-medium text-white leading-tight"
+                        className="text-[24px] md:text-[36px] lg:text-5xl mb-7 font-medium text-white leading-tight"
                     >
-                        <span className="text-[#4682b4]">
+                        <span className="text-[#3091e1]">
                             Automatize seu negócio do jeito certo.
                         </span>{" "}
-                        A LexTec executa suas tarefas 24h por dia, sem erro
+                        A LexiCorm executa suas tarefas 24h por dia, sem erro
                         humano.
                     </motion.h3>
                     <div className="auto-card mb-6">
@@ -522,13 +522,15 @@ export default function AutomationTimeline() {
                     </div>
                     <div className="auto-card mb-8">
                         <p className="text-white/70 text-lg font-medium mb-2">
-                            <span className="text-white font-bold">LexTec</span>{" "}
+                            <span className="text-white font-bold">
+                                LexiCorm
+                            </span>{" "}
                             é sua plataforma de automação inteligente. Configure
                             fluxos com IA, integre seus sistemas e acompanhe
                             tudo em tempo real.
                         </p>
-                        <span className="inline-flex items-center gap-1 text-[#4682b4] text-sm cursor-pointer hover:underline">
-                            Conheça a LexTec →
+                        <span className="inline-flex items-center gap-1 text-[#3091e1] text-sm cursor-pointer hover:underline">
+                            Conheça a LexiCorm →
                         </span>
                     </div>
                     <div className="grid md:grid-cols-2 gap-6">
@@ -541,7 +543,7 @@ export default function AutomationTimeline() {
                                     Veja cada etapa em tempo real — do gatilho
                                     ao resultado.
                                 </p>
-                                <span className="inline-flex items-center gap-1 text-[#4682b4] text-sm mt-2 cursor-pointer hover:underline">
+                                <span className="inline-flex items-center gap-1 text-[#3091e1] text-sm mt-2 cursor-pointer hover:underline">
                                     Ver fluxos →
                                 </span>
                             </div>
@@ -556,7 +558,7 @@ export default function AutomationTimeline() {
                                     Acompanhe economia de tempo, uptime e volume
                                     de cada automação.
                                 </p>
-                                <span className="inline-flex items-center gap-1 text-[#4682b4] text-sm mt-2 cursor-pointer hover:underline">
+                                <span className="inline-flex items-center gap-1 text-[#3091e1] text-sm mt-2 cursor-pointer hover:underline">
                                     Ver dashboard →
                                 </span>
                             </div>
@@ -597,17 +599,17 @@ export default function AutomationTimeline() {
                         whileInView={{ height: "100%" }}
                         transition={{ duration: 0.4, delay: 0.6 }}
                         viewport={{ once: false }}
-                        className="w-[3px] grow mt-7 rounded-md bg-gradient-to-b from-[#7ec8f0] via-[#4682b4] to-transparent"
+                        className="w-[3px] grow mt-7 rounded-md bg-gradient-to-b from-[#2bb3a3] via-[#3091e1] to-transparent"
                     />
                 </div>
 
-                <div className="md:w-10/12 mb-10">
+                <div className="flex-1 min-w-0 mb-10">
                     <motion.div
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ delay: 0.4, duration: 0.3 }}
                         viewport={{ once: false }}
-                        className="text-[20px] md:text-2xl mb-7 font-medium text-white"
+                        className="text-[18px] md:text-2xl mb-7 font-medium text-white"
                     >
                         Integrações de Sistemas
                     </motion.div>
@@ -616,9 +618,9 @@ export default function AutomationTimeline() {
                         whileInView={{ opacity: 1 }}
                         transition={{ delay: 0.5, duration: 0.3 }}
                         viewport={{ once: false }}
-                        className="text-[28px] md:text-[40px] lg:text-5xl mb-7 font-medium text-white leading-tight"
+                        className="text-[24px] md:text-[36px] lg:text-5xl mb-7 font-medium text-white leading-tight"
                     >
-                        <span className="text-[#7ec8f0]">
+                        <span className="text-[#3091e1]">
                             Conecte todos os seus sistemas.
                         </span>{" "}
                         ERPs, APIs e plataformas distintas em tempo real, sem

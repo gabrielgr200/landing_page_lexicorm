@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import {
     FaWhatsapp,
     FaInstagram,
-    FaLinkedin,
     FaEnvelope,
+    FaFacebook,
 } from "react-icons/fa";
 
 const links = [
@@ -39,16 +39,16 @@ const links = [
 ];
 
 const socials = [
-    { icon: <FaLinkedin size={16} />, href: "#", label: "LinkedIn" },
+    { icon: <FaFacebook size={16} />, href: "#", label: "Facebook" },
     { icon: <FaInstagram size={16} />, href: "#", label: "Instagram" },
     {
         icon: <FaWhatsapp size={16} />,
-        href: "https://wa.me/5537996605585",
+        href: "https://wa.me/5537984266588",
         label: "WhatsApp",
     },
     {
         icon: <FaEnvelope size={16} />,
-        href: "mailto:pablo2733v@gmail.com",
+        href: "mailto:marketing@lexicorm.com.br",
         label: "E-mail",
     },
 ];
@@ -57,12 +57,11 @@ export default function Footer() {
     return (
         <footer className="bg-black border-t border-white/[0.06]">
             <div className="max-w-[1280px] mx-auto px-4">
-                <div className="py-16 grid lg:grid-cols-4 gap-12">
-                    {/* Logo + descrição + socials */}
-                    <div className="lg:col-span-1">
+                <div className="py-12 lg:py-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+                    <div className="sm:col-span-2 lg:col-span-1">
                         <div className="mb-4">
                             <span className="text-white font-bold text-2xl tracking-tight">
-                                Lexi<span className="text-[#4682b4]">corm</span>
+                                Lexi<span className="text-[#3091e1]">corm</span>
                             </span>
                         </div>
                         <p className="text-white/40 text-sm leading-relaxed mb-6">
@@ -86,7 +85,6 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* Links */}
                     {links.map((group, i) => (
                         <div key={i}>
                             <p className="text-white font-semibold text-sm mb-5">
@@ -97,7 +95,7 @@ export default function Footer() {
                                     <li key={j}>
                                         <a
                                             href={item.href}
-                                            className="text-white/40 text-sm hover:text-[#4682b4] transition-colors duration-200"
+                                            className="text-white/40 text-sm hover:text-[#3091e1] transition-colors duration-200"
                                         >
                                             {item.label}
                                         </a>
@@ -108,13 +106,12 @@ export default function Footer() {
                     ))}
                 </div>
 
-                {/* Linha animada */}
                 <div className="relative h-[1px] bg-white/[0.06] overflow-hidden">
                     <motion.div
                         className="absolute top-0 left-0 h-full w-1/3"
                         style={{
                             background:
-                                "linear-gradient(90deg, transparent, #4682b4, transparent)",
+                                "linear-gradient(90deg, transparent, #2bb3a3, transparent)",
                         }}
                         animate={{ x: ["-100%", "400%"] }}
                         transition={{
@@ -125,14 +122,14 @@ export default function Footer() {
                     />
                 </div>
 
-                {/* Bottom */}
                 <div className="py-6 flex flex-col md:flex-row items-center justify-between gap-4">
                     <p className="text-white/25 text-xs">
                         © {new Date().getFullYear()} Lexicorm. Todos os direitos
                         reservados.
                     </p>
+
                     <p className="text-white/25 text-xs">
-                        Desenvolvido com ❤️ em Divinópolis, MG — Brasil
+                        Desenvolvido em Divinópolis, MG — Brasil
                     </p>
                 </div>
             </div>

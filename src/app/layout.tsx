@@ -21,7 +21,7 @@ export default function RootLayout({
     return (
         <html lang="pt-br" className="dark">
             <body
-                className={`${inter.variable} font-sans antialiased bg-black text-white`}
+                className={`${inter.variable} font-sans antialiased bg-black text-white overflow-x-hidden`}
             >
                 {children}
             </body>

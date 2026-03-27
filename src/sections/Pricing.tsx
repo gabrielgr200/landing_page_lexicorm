@@ -251,7 +251,7 @@ export default function Pricing() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="py-24">
+        <section id="packages" ref={sectionRef} className="py-24">
             <div className="max-w-[1280px] mx-auto px-4">
                 <div className="pricing-title text-center mb-16 opacity-0">
                     <p className="text-white/40 text-sm font-semibold tracking-widest uppercase mb-3">
