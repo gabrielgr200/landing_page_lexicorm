@@ -366,8 +366,11 @@ export default function Pricing() {
                                     </li>
                                 ))}
                             </ul>
-                            <button
-                                className="w-full py-3 rounded-xl font-semibold text-sm transition-all duration-200 hover:opacity-90 active:scale-95"
+                            <a
+                                href={`https://wa.me/5537984266588?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20plano%20${encodeURIComponent(plan.name)}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-full py-3 rounded-xl font-semibold text-sm transition-all duration-200 hover:opacity-90 active:scale-95 text-center block"
                                 style={{
                                     background: plan.highlight
                                         ? plan.color
@@ -377,7 +380,7 @@ export default function Pricing() {
                                 }}
                             >
                                 {plan.button}
-                            </button>
+                            </a>
                         </TiltCard>
                     ))}
                 </div>
@@ -464,8 +467,11 @@ export default function Pricing() {
                                 </li>
                             ))}
                         </ul>
-                        <button
-                            className="w-full py-3 rounded-xl font-semibold text-sm transition-all duration-200 hover:opacity-90 active:scale-95"
+                        <a
+                            href={`https://wa.me/5537984266588?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20plano%20${encodeURIComponent(plansR97[activeR97].name)}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full py-3 rounded-xl font-semibold text-sm transition-all duration-200 hover:opacity-90 active:scale-95 text-center block"
                             style={{
                                 border: `1.5px solid ${plansR97[activeR97].color}`,
                                 color: plansR97[activeR97].color,
@@ -473,7 +479,7 @@ export default function Pricing() {
                             }}
                         >
                             Quero este plano →
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

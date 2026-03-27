@@ -6,7 +6,8 @@
       "Bash(rm public/note.mp4)",
       "Bash(mv public/note_compressed.mp4 public/note.mp4)",
       "Bash(wmic datafile:*)",
-      "Bash(powershell -Command \"\\(Get-Item 'C:\\\\Users\\\\gabri\\\\OneDrive\\\\Documentos\\\\projetos\\\\lexicorm_site\\\\site\\\\public\\\\note.mp4'\\).Length / 1MB\")"
+      "Bash(powershell -Command \"\\(Get-Item 'C:\\\\Users\\\\gabri\\\\OneDrive\\\\Documentos\\\\projetos\\\\lexicorm_site\\\\site\\\\public\\\\note.mp4'\\).Length / 1MB\")",
+      "Bash(npm install:*)"
     ]
   }
 }

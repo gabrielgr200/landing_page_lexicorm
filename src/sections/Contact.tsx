@@ -15,6 +15,8 @@ export default function Contact() {
         mensagem: "",
     });
     const [sent, setSent] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState("");
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -273,12 +275,32 @@ export default function Contact() {
                                     />
                                 </div>
 
+                                {error && (
+                                    <p className="text-red-400 text-xs mb-3 text-center">{error}</p>
+                                )}
                                 <button
-                                    onClick={() => setSent(true)}
-                                    className="w-full py-3.5 rounded-xl font-bold text-sm text-white flex items-center justify-center gap-2 transition-all duration-200 hover:opacity-90 active:scale-95"
+                                    onClick={async () => {
+                                        setError("");
+                                        setLoading(true);
+                                        try {
+                                            const res = await fetch("/api/contact", {
+                                                method: "POST",
+                                                headers: { "Content-Type": "application/json" },
+                                                body: JSON.stringify(form),
+                                            });
+                                            if (!res.ok) throw new Error();
+                                            setSent(true);
+                                        } catch {
+                                            setError("Erro ao enviar. Tente novamente ou entre em contato pelo WhatsApp.");
+                                        } finally {
+                                            setLoading(false);
+                                        }
+                                    }}
+                                    disabled={loading}
+                                    className="w-full py-3.5 rounded-xl font-bold text-sm text-white flex items-center justify-center gap-2 transition-all duration-200 hover:opacity-90 active:scale-95 disabled:opacity-60"
                                     style={{ background: "#4682b4" }}
                                 >
-                                    Enviar mensagem
+                                    {loading ? "Enviando..." : "Enviar mensagem"}
                                     <svg
                                         width="16"
                                         height="16"
