@@ -18,6 +18,13 @@ export async function POST(req: NextRequest) {
         },
     });
 
+    try {
+        await transporter.verify();
+    } catch (verifyErr) {
+        console.error("SMTP verify error:", verifyErr);
+        return NextResponse.json({ error: String(verifyErr) }, { status: 500 });
+    }
+
     await transporter.sendMail({
         from: `"Lexicorm Site" <${process.env.SMTP_USER}>`,
         to: "gabrielgomesblack70@gmail.com",
