@@ -280,6 +280,10 @@ export default function Contact() {
                                 )}
                                 <button
                                     onClick={async () => {
+                                        if (!form.nome || !form.email || !form.mensagem) {
+                                            setError("Preencha os campos obrigatórios: Nome, E-mail e Mensagem.");
+                                            return;
+                                        }
                                         setError("");
                                         setLoading(true);
                                         try {
